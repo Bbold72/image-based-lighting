@@ -29,7 +29,7 @@ Irradiance is the amount of light received per second by the sensor cell. Since 
 
 Generally, intensity is a non-linear function of exposure both due to clipping and the camera response function, which for most cameras compresses very dark and bright exposure values into a smaller range of intensity values. To convert pixel values to true irradiance values, this nonlinear response function is estimated. Since there are multiple observations of each pixel with different exposure times, the irradiance (exposure per second) at each pixel can be solved up to an unknown constant factor. 
 
-Following the [Debevec and Malik 1997](https://www.pauldebevec.com/Research/HDR/debevec-siggraph97.pdf), the constraint to solve for is $g(Z_{ij})= \ln{R_i} + \ln⁡{t_j}$, where $i$ is the ith pixel, $j$ is the $j^{th}$ image, $Z$ is the pixel value for an image, $R$ is the irradiance for each pixel, $t$ is the exposure time of each image, and $g$ is the inverse log response function. Solving for log irradiance for each pixel intensity involves solving a linear least squares problem.
+Following the [Debevec and Malik 1997](https://www.pauldebevec.com/Research/HDR/debevec-siggraph97.pdf), the constraint to solve for is $g(Z_{ij})= \ln{R_i} + \ln⁡{t_j}$, where $i$ is the $i^{th}$ pixel, $j$ is the $j^{th}$ image, $Z$ is the pixel value for an image, $R$ is the irradiance for each pixel, $t$ is the exposure time of each image, and $g$ is the inverse log response function. Solving for log irradiance for each pixel intensity involves solving a linear least squares problem.
 
 
 ![""](images/outputs/samples/camera_response_function.png "title")
